@@ -9,13 +9,13 @@ export default function BlogSection({ onOpenQuoteModal }) {
         {/* Header */}
         <div className="section-header center-text">
           <div className="section-badge">
-            <Sparkles className="icon-xs" /> ISLAND GUIDES & TRAVEL JOURNAL
+            <Sparkles className="icon-xs" /> AUSTRALIA GUIDES & TRAVEL JOURNAL
           </div>
           <h2 className="section-title">
-            Latest Travel Tips & <span className="gradient-text">Seychelles Insights</span>
+            Latest Travel Tips & <span className="gradient-text">Australia Insights</span>
           </h2>
           <p className="section-description">
-            Expert insider advice on weather seasons, island hopping routes, luxury stay reviews, and airfare hacks.
+            Practical inspiration for Australian cities, coastlines, road trips and nature escapes.
           </p>
         </div>
 

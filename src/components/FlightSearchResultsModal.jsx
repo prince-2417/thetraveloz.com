@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { 
   X, Plane, SlidersHorizontal, ArrowRight, ShieldCheck, 
-  Clock, PhoneCall, Check, Sparkles 
+  Clock, Check, Sparkles 
 } from 'lucide-react';
 import { MOCK_FLIGHT_RESULTS } from '../data/travelData';
 
@@ -40,10 +40,10 @@ export default function FlightSearchResultsModal({
         <div className="modal-header">
           <div className="modal-header-info">
             <div className="modal-badge">
-              <Sparkles className="icon-xs" /> LIVE FLIGHT SEARCH
+              <Sparkles className="icon-xs" /> SAMPLE FLIGHT OPTIONS
             </div>
             <h2 className="modal-title">
-              Available Flights: {searchParams?.fromAirport || 'SYD'} <ArrowRight className="icon-xs inline-block" /> {searchParams?.toAirport || 'SEZ'}
+              Flight Options: {searchParams?.fromAirport || 'SYD'} <ArrowRight className="icon-xs inline-block" /> {searchParams?.toAirport || 'MEL'}
             </h2>
             <p className="modal-subtitle">
               {searchParams?.departDate || 'Oct 15'} • {searchParams?.passengers || 2} Passengers • {searchParams?.cabinClass || 'Economy'}
@@ -101,16 +101,13 @@ export default function FlightSearchResultsModal({
                 </div>
               </div>
 
-              {/* Phone Discount Banner */}
               <div className="phone-discount-card">
                 <div className="pd-icon">
-                  <PhoneCall className="icon-md text-gold" />
+                  <Plane className="icon-md text-gold" />
                 </div>
-                <h4>Looking for Lower Fares?</h4>
-                <p>Call our hotline to unlock hidden airline seat inventory not available online!</p>
-                <a href="tel:+18885550199" className="pd-call-btn">
-                  Call +1-888-555-0199
-                </a>
+                <h4>Need a tailored route?</h4>
+                <p>Use TheTravelOz to send your travel preferences and dates.</p>
+                <a href="/contact" className="pd-call-btn">Contact TheTravelOz</a>
               </div>
             </div>
           </div>
@@ -179,7 +176,7 @@ export default function FlightSearchResultsModal({
                           {currency.symbol}{price}
                         </span>
                         <span className="seats-lbl">
-                          <Clock className="icon-xs inline-block" /> Only {flight.seatsRemaining} seats left at this price
+                          <Clock className="icon-xs inline-block" /> Guide price for your travel planning
                         </span>
                       </div>
 
@@ -187,7 +184,7 @@ export default function FlightSearchResultsModal({
                         className="select-flight-btn"
                         onClick={() => onSelectFlight(flight)}
                       >
-                        <Check className="icon-sm" /> Lock Fare & Book
+                        <Check className="icon-sm" /> Request this option
                       </button>
                     </div>
                   </div>

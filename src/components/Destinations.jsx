@@ -7,10 +7,13 @@ export default function Destinations({ currency, onSelectDestination }) {
 
   const categories = [
     'All',
-    'Seychelles & Islands',
-    'Australia & Pacific',
-    'Asia & Tropics',
-    'Europe Luxury'
+    'New South Wales',
+    'Queensland',
+    'Victoria',
+    'Tasmania',
+    'Western Australia',
+    'Northern Territory',
+    'South Australia'
   ];
 
   const filteredDestinations = activeCategory === 'All' 
@@ -26,10 +29,10 @@ export default function Destinations({ currency, onSelectDestination }) {
             <Sparkles className="icon-xs" /> HANDPICKED DESTINATIONS
           </div>
           <h2 className="section-title">
-            Explore Iconic <span className="gradient-text">Island & Coastal Escapes</span>
+            Explore Iconic <span className="gradient-text">Australia Escapes</span>
           </h2>
           <p className="section-description">
-            From the granitic beaches of Seychelles to the Great Barrier Reef & European coastlines, choose your next unforgettable journey.
+            From city harbours and tropical reefs to the outback and wild coastlines, choose your next Australia journey.
           </p>
 
           {/* Filter Pills */}

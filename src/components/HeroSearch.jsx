@@ -12,7 +12,7 @@ export default function HeroSearch({ onSearchFlights }) {
   
   // Search Form State
   const [fromAirport, setFromAirport] = useState('SYD');
-  const [toAirport, setToAirport] = useState('SEZ');
+  const [toAirport, setToAirport] = useState('MEL');
   const [departDate, setDepartDate] = useState('2026-10-15');
   const [returnDate, setReturnDate] = useState('2026-10-25');
   const [passengers, setPassengers] = useState(2);
@@ -47,27 +47,27 @@ export default function HeroSearch({ onSearchFlights }) {
           {/* Hero Left Intro */}
           <div className="hero-text-col">
             <div className="hero-badge">
-              <Sparkles className="icon-sm" /> LUXURY & BUDGET TRAVEL EXPERTS
+              <Sparkles className="icon-sm" /> AUSTRALIA TRAVEL, MADE SIMPLE
             </div>
             <h1 className="hero-title">
-              Discover Paradise with <span className="gradient-text">TheTravelOz</span>
+              Explore Australia with <span className="gradient-text">TheTravelOz</span>
             </h1>
             <p className="hero-description">
-              Compare cheap flights, luxury resort stays, and exclusive Seychelles & Australia getaway packages. Book online or call our phone-only concierge for unpublished fares!
+              Explore Australian city breaks, coastal escapes, road trips and custom holiday ideas in one easy place.
             </p>
 
             <div className="hero-highlights-list">
               <div className="highlight-item">
                 <CheckCircle2 className="icon-sm text-cyan" />
-                <span>Save Up To $400 On Phone Bookings</span>
+                <span>Australia travel inspiration</span>
               </div>
               <div className="highlight-item">
                 <CheckCircle2 className="icon-sm text-cyan" />
-                <span>Instant 24/7 Agent Confirmation</span>
+                <span>Flexible trip planning</span>
               </div>
               <div className="highlight-item">
                 <CheckCircle2 className="icon-sm text-cyan" />
-                <span>Zero Hidden Fees or Charges</span>
+                <span>Clear enquiry process</span>
               </div>
             </div>
           </div>
@@ -255,7 +255,7 @@ export default function HeroSearch({ onSearchFlights }) {
               <div className="search-submit-row">
                 <button type="submit" className="hero-search-submit-btn">
                   <Search className="icon-md" />
-                  <span>FIND BEST FLIGHTS & DEALS</span>
+                  <span>EXPLORE FLIGHT OPTIONS</span>
                 </button>
               </div>
 

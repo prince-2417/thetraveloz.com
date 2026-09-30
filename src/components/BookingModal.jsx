@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { X, Send, PhoneCall, CheckCircle2, ShieldCheck, Sparkles } from 'lucide-react';
+import { X, Send, CheckCircle2, ShieldCheck, Sparkles } from 'lucide-react';
 
 export default function BookingModal({ isOpen, onClose, initialData }) {
   const [submitted, setSubmitted] = useState(false);
@@ -36,15 +36,14 @@ export default function BookingModal({ isOpen, onClose, initialData }) {
             <div className="success-icon-wrapper">
               <CheckCircle2 className="icon-xl text-emerald" />
             </div>
-            <h2>Quote Request Received!</h2>
+            <h2>Trip Enquiry Received!</h2>
             <p>
-              Thank you, <strong>{formData.fullName || 'Valued Traveler'}</strong>. Our travel specialist is reviewing unpublished rates for <strong>{initialData?.title || initialData?.airline || 'your requested destination'}</strong>.
+              Thank you, <strong>{formData.fullName || 'traveller'}</strong>. We have received your enquiry for <strong>{initialData?.title || initialData?.airline || 'your requested destination'}</strong>.
             </p>
             <div className="success-info-box">
-              <PhoneCall className="icon-md text-gold" />
               <div>
-                <strong>Expect a call within 15 minutes</strong>
-                <p>For urgent flight changes or immediate locking, call us at +1-888-555-0199.</p>
+                <strong>We will review your trip details</strong>
+                <p>Use the contact page if you need to add more information.</p>
               </div>
             </div>
             <button className="modal-done-btn" onClick={handleCloseModal}>
@@ -55,16 +54,16 @@ export default function BookingModal({ isOpen, onClose, initialData }) {
           <div className="modal-form-wrapper">
             <div className="modal-form-header">
               <div className="modal-badge">
-                <Sparkles className="icon-xs" /> FREE CUSTOM QUOTE
+                <Sparkles className="icon-xs" /> CUSTOM TRIP ENQUIRY
               </div>
               <h2>
                 {initialData?.title 
                   ? `Inquire about: ${initialData.title}` 
                   : initialData?.airline 
                   ? `Lock Flight Fare: ${initialData.airline} (${initialData.flightNo})` 
-                  : 'Request Custom Travel Quote'}
+                  : 'Request a Custom Trip'}
               </h2>
-              <p>Lock in phone-only discounts, resort upgrades, and zero booking fee options.</p>
+              <p>Tell us what you would like to see in Australia and the dates you have in mind.</p>
             </div>
 
             <form onSubmit={handleSubmit} className="quote-form-grid">
@@ -81,12 +80,12 @@ export default function BookingModal({ isOpen, onClose, initialData }) {
               </div>
 
               <div className="form-group">
-                <label className="form-label">Phone Number (For Instant Callback) *</label>
+                <label className="form-label">Phone Number *</label>
                 <input 
                   type="tel" 
                   required 
                   className="form-input" 
-                  placeholder="+1 (555) 000-0000"
+                  placeholder="Your phone number"
                   value={formData.phone}
                   onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
                 />
@@ -134,7 +133,7 @@ export default function BookingModal({ isOpen, onClose, initialData }) {
                 <textarea 
                   className="form-textarea" 
                   rows="3"
-                  placeholder="E.g., Overwater villa, vegetarian meal preference, ocean view, flexible dates..."
+                  placeholder="E.g., preferred destinations, travel style, accommodation and flexible dates..."
                   value={formData.notes}
                   onChange={(e) => setFormData({ ...formData, notes: e.target.value })}
                 ></textarea>
@@ -142,12 +141,12 @@ export default function BookingModal({ isOpen, onClose, initialData }) {
 
               <div className="form-group full-width">
                 <button type="submit" className="submit-quote-btn">
-                  <Send className="icon-sm" /> Send Quote Request
+                  <Send className="icon-sm" /> Send Trip Enquiry
                 </button>
               </div>
 
               <div className="form-trust-note">
-                <ShieldCheck className="icon-xs text-emerald" /> Your contact details are 100% confidential. No spam guaranteed.
+                <ShieldCheck className="icon-xs text-emerald" /> Your details are used to respond to this enquiry.
               </div>
             </form>
           </div>

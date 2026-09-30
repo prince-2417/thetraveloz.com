@@ -9,13 +9,13 @@ export default function AirlinePartners({ currency, onSearchAirline }) {
         {/* Section Header */}
         <div className="section-header center-text">
           <div className="section-badge">
-            <Sparkles className="icon-xs" /> CERTIFIED AIRLINE PARTNERS
+            <Sparkles className="icon-xs" /> FLIGHT IDEAS FOR AUSTRALIA
           </div>
           <h2 className="section-title">
-            Fly with World-Class <span className="gradient-text">Airlines & Direct Routes</span>
+            Explore Flexible <span className="gradient-text">Flight Options & Routes</span>
           </h2>
           <p className="section-description">
-            We partner directly with leading global carriers to guarantee competitive airfares, baggage allowances, and flexible flight changes.
+            Start with an Australian route idea, then send an enquiry for options that fit your dates and travel preferences.
           </p>
         </div>
 
@@ -30,12 +30,12 @@ export default function AirlinePartners({ currency, onSearchAirline }) {
                   <div className="airline-flag">{airline.logo}</div>
                   <div className="airline-info">
                     <h3 className="airline-name">{airline.name}</h3>
-                    <span className="airline-code">Carrier Code: {airline.code}</span>
+                    <span className="airline-code">Travel type: {airline.code}</span>
                   </div>
                 </div>
 
                 <div className="airline-routes">
-                  <span className="routes-label">Popular Routes:</span>
+                  <span className="routes-label">Popular places:</span>
                   <p className="routes-text">{airline.directRoutes}</p>
                 </div>
 
@@ -49,7 +49,7 @@ export default function AirlinePartners({ currency, onSearchAirline }) {
                     className="airline-search-btn"
                     onClick={() => onSearchAirline(airline)}
                   >
-                    <span>Fares</span>
+                    <span>Explore</span>
                     <ArrowRight className="icon-xs" />
                   </button>
                 </div>
@@ -63,15 +63,15 @@ export default function AirlinePartners({ currency, onSearchAirline }) {
           <div className="trust-item">
             <ShieldCheck className="icon-md text-cyan" />
             <div>
-              <h4>Official Airline Ticketing Agent</h4>
-              <p>Direct API integration with GDS for real-time seat availability</p>
+              <h4>Travel options for your dates</h4>
+              <p>Send an enquiry and tell us where and when you would like to travel.</p>
             </div>
           </div>
           <div className="trust-item">
             <Plane className="icon-md text-cyan" />
             <div>
-              <h4>Flexible Baggage & Seat Selection</h4>
-              <p>Add extra luggage or select seat preferences free over the phone</p>
+              <h4>Plan the whole journey</h4>
+              <p>Combine flights, stays, road trips and activities in one itinerary request.</p>
             </div>
           </div>
         </div>

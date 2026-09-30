@@ -1,386 +1,64 @@
 export const CURRENCIES = {
-  USD: { code: 'USD', symbol: '$', rate: 1.0, label: 'USD ($)' },
-  AUD: { code: 'AUD', symbol: 'A$', rate: 1.52, label: 'AUD (A$)' },
-  EUR: { code: 'EUR', symbol: '€', rate: 0.92, label: 'EUR (€)' },
-  GBP: { code: 'GBP', symbol: '£', rate: 0.78, label: 'GBP (£)' },
+  AUD: { code: 'AUD', symbol: 'A$', rate: 1, label: 'AUD (A$)' },
+  USD: { code: 'USD', symbol: '$', rate: 0.66, label: 'USD ($)' },
+  EUR: { code: 'EUR', symbol: '€', rate: 0.60, label: 'EUR (€)' },
+  GBP: { code: 'GBP', symbol: '£', rate: 0.51, label: 'GBP (£)' },
 };
 
 export const POPULAR_AIRPORTS = [
-  { code: 'SEZ', city: 'Mahé / Seychelles', name: 'Seychelles International Airport', country: 'Seychelles' },
-  { code: 'SYD', city: 'Sydney', name: 'Sydney Kingsford Smith Airport', country: 'Australia' },
+  { code: 'SYD', city: 'Sydney', name: 'Sydney Airport', country: 'Australia' },
   { code: 'MEL', city: 'Melbourne', name: 'Melbourne Airport', country: 'Australia' },
   { code: 'BNE', city: 'Brisbane', name: 'Brisbane Airport', country: 'Australia' },
+  { code: 'CNS', city: 'Cairns', name: 'Cairns Airport', country: 'Australia' },
   { code: 'PER', city: 'Perth', name: 'Perth Airport', country: 'Australia' },
-  { code: 'DXB', city: 'Dubai', name: 'Dubai International Airport', country: 'UAE' },
-  { code: 'SIN', city: 'Singapore', name: 'Changi Airport', country: 'Singapore' },
-  { code: 'LHR', city: 'London', name: 'Heathrow Airport', country: 'United Kingdom' },
-  { code: 'JFK', city: 'New York', name: 'John F. Kennedy International Airport', country: 'United States' },
-  { code: 'DPS', city: 'Bali', name: 'Ngurah Rai International Airport', country: 'Indonesia' },
-  { code: 'MLE', city: 'Maldives', name: 'Velana International Airport', country: 'Maldives' },
+  { code: 'ADL', city: 'Adelaide', name: 'Adelaide Airport', country: 'Australia' },
+  { code: 'HBA', city: 'Hobart', name: 'Hobart Airport', country: 'Australia' },
+  { code: 'OOL', city: 'Gold Coast', name: 'Gold Coast Airport', country: 'Australia' },
 ];
 
 export const DESTINATIONS = [
-  {
-    id: 'seychelles-mahe',
-    title: 'Mahé Island, Seychelles',
-    category: 'Seychelles & Islands',
-    image: 'https://images.unsplash.com/photo-1589553460732-58ef7a11d986?auto=format&fit=crop&w=800&q=80',
-    priceUSD: 890,
-    originalPriceUSD: 1150,
-    rating: 4.9,
-    reviewsCount: 342,
-    badge: 'Popular Choice',
-    tagline: 'Granite cliffs, turquoise lagoons & lush botanical gardens',
-    duration: '5 - 10 Days'
-  },
-  {
-    id: 'seychelles-praslin',
-    title: 'Praslin & Anse Lazio',
-    category: 'Seychelles & Islands',
-    image: 'https://images.unsplash.com/photo-1544551763-46a013bb70d5?auto=format&fit=crop&w=800&q=80',
-    priceUSD: 1050,
-    originalPriceUSD: 1390,
-    rating: 5.0,
-    reviewsCount: 289,
-    badge: 'Luxury Escape',
-    tagline: 'Home of the rare Vallée de Mai & world-class white sand beaches',
-    duration: '6 - 9 Days'
-  },
-  {
-    id: 'seychelles-la-digue',
-    title: 'La Digue & Anse Source d\'Argent',
-    category: 'Seychelles & Islands',
-    image: 'https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=800&q=80',
-    priceUSD: 980,
-    originalPriceUSD: 1240,
-    rating: 4.95,
-    reviewsCount: 410,
-    badge: 'Best Beaches',
-    tagline: 'Bicycle paradise with famous giant granite boulders',
-    duration: '5 - 8 Days'
-  },
-  {
-    id: 'australia-sydney',
-    title: 'Sydney & Harbour Riviera',
-    category: 'Australia & Pacific',
-    image: 'https://images.unsplash.com/photo-1506973035872-a4ec16b8e8d9?auto=format&fit=crop&w=800&q=80',
-    priceUSD: 750,
-    originalPriceUSD: 980,
-    rating: 4.85,
-    reviewsCount: 520,
-    badge: 'Iconic City',
-    tagline: 'Opera House, Bondi Beach & world-class dining',
-    duration: '4 - 7 Days'
-  },
-  {
-    id: 'australia-barrier-reef',
-    title: 'Cairns & Great Barrier Reef',
-    category: 'Australia & Pacific',
-    image: 'https://images.unsplash.com/photo-1582967788606-a171c1080cb0?auto=format&fit=crop&w=800&q=80',
-    priceUSD: 1120,
-    originalPriceUSD: 1450,
-    rating: 4.98,
-    reviewsCount: 615,
-    badge: 'Wonder of Nature',
-    tagline: 'Snorkel & dive the world’s largest coral reef ecosystem',
-    duration: '5 - 9 Days'
-  },
-  {
-    id: 'maldives-overwater',
-    title: 'Maldives Private Villa Escape',
-    category: 'Asia & Tropics',
-    image: 'https://images.unsplash.com/photo-1514282401047-d79a71a590e8?auto=format&fit=crop&w=800&q=80',
-    priceUSD: 1490,
-    originalPriceUSD: 1950,
-    rating: 4.97,
-    reviewsCount: 380,
-    badge: 'Honeymoon Special',
-    tagline: 'Direct ocean access, private infinity pool & butler service',
-    duration: '5 - 8 Days'
-  },
-  {
-    id: 'bali-luxury-resort',
-    title: 'Ubud & Seminyak, Bali',
-    category: 'Asia & Tropics',
-    image: 'https://images.unsplash.com/photo-1537996194471-e657df975ab4?auto=format&fit=crop&w=800&q=80',
-    priceUSD: 620,
-    originalPriceUSD: 850,
-    rating: 4.88,
-    reviewsCount: 490,
-    badge: 'Best Value',
-    tagline: 'Lush rainforest villas, ancient temples & beachside sunsets',
-    duration: '6 - 10 Days'
-  },
-  {
-    id: 'europe-greek-islands',
-    title: 'Santorini & Mykonos, Greece',
-    category: 'Europe Luxury',
-    image: 'https://images.unsplash.com/photo-1570077188670-e3a8d69ac5ff?auto=format&fit=crop&w=800&q=80',
-    priceUSD: 1350,
-    originalPriceUSD: 1720,
-    rating: 4.92,
-    reviewsCount: 310,
-    badge: 'Trending Now',
-    tagline: 'Whitewashed cliffside suites, Aegean views & romantic sunsets',
-    duration: '7 - 12 Days'
-  }
+  { id: 'sydney', title: 'Sydney Harbour', category: 'New South Wales', image: 'https://images.unsplash.com/photo-1506973035872-a4ec16b8e8d9?auto=format&fit=crop&w=800&q=80', priceUSD: 699, originalPriceUSD: 849, rating: 4.9, reviewsCount: 0, badge: 'City Escape', tagline: 'Harbour views, iconic beaches and vibrant dining', duration: '3 - 5 Days' },
+  { id: 'great-barrier-reef', title: 'Great Barrier Reef', category: 'Queensland', image: 'https://images.unsplash.com/photo-1582967788606-a171c1080cb0?auto=format&fit=crop&w=800&q=80', priceUSD: 1049, originalPriceUSD: 1299, rating: 4.9, reviewsCount: 0, badge: 'Nature Escape', tagline: 'Reef adventures, tropical islands and clear blue water', duration: '4 - 7 Days' },
+  { id: 'uluru', title: 'Uluru & Red Centre', category: 'Northern Territory', image: 'https://images.unsplash.com/photo-1561214115-f2f134cc4912?auto=format&fit=crop&w=800&q=80', priceUSD: 899, originalPriceUSD: 1099, rating: 4.8, reviewsCount: 0, badge: 'Outback Journey', tagline: 'Ancient landscapes, desert skies and cultural discovery', duration: '3 - 5 Days' },
+  { id: 'melbourne', title: 'Melbourne & Great Ocean Road', category: 'Victoria', image: 'https://images.unsplash.com/photo-1514395462725-fb4566210144?auto=format&fit=crop&w=800&q=80', priceUSD: 759, originalPriceUSD: 929, rating: 4.8, reviewsCount: 0, badge: 'Road Trip', tagline: 'Laneways, coastal cliffs and unforgettable drives', duration: '4 - 6 Days' },
+  { id: 'tasmania', title: 'Tasmania Wilderness', category: 'Tasmania', image: 'https://images.unsplash.com/photo-1496497243327-9dccd845c35f?auto=format&fit=crop&w=800&q=80', priceUSD: 940, originalPriceUSD: 1160, rating: 4.9, reviewsCount: 0, badge: 'Wild Escape', tagline: 'Mountain trails, pristine coastlines and local produce', duration: '5 - 8 Days' },
+  { id: 'perth', title: 'Perth & Coral Coast', category: 'Western Australia', image: 'https://images.unsplash.com/photo-1509316785289-025f5b846b35?auto=format&fit=crop&w=800&q=80', priceUSD: 829, originalPriceUSD: 1010, rating: 4.8, reviewsCount: 0, badge: 'Coastal Break', tagline: 'Sunshine, beaches and wide-open western landscapes', duration: '4 - 7 Days' },
+  { id: 'gold-coast', title: 'Gold Coast', category: 'Queensland', image: 'https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=800&q=80', priceUSD: 650, originalPriceUSD: 790, rating: 4.7, reviewsCount: 0, badge: 'Family Favourite', tagline: 'Golden beaches, rainforest walks and easy fun', duration: '3 - 6 Days' },
+  { id: 'kangaroo-island', title: 'Kangaroo Island', category: 'South Australia', image: 'https://images.unsplash.com/photo-1500534314209-a25ddb2bd429?auto=format&fit=crop&w=800&q=80', priceUSD: 780, originalPriceUSD: 960, rating: 4.8, reviewsCount: 0, badge: 'Island Retreat', tagline: 'Native wildlife, quiet beaches and wild coastlines', duration: '3 - 5 Days' },
 ];
 
 export const HOLIDAY_PACKAGES = [
-  {
-    id: 'pkg-seychelles-paradise',
-    title: '7-Day Seychelles Paradise Island Hop',
-    destination: 'Mahé + Praslin + La Digue',
-    image: 'https://images.unsplash.com/photo-1544551763-46a013bb70d5?auto=format&fit=crop&w=800&q=80',
-    priceUSD: 1499,
-    originalPriceUSD: 1999,
-    discountPercent: 25,
-    rating: 4.96,
-    nights: 7,
-    days: 8,
-    badge: 'HOT DEAL 🔥',
-    inclusions: [
-      'Return International Flights Included',
-      '5★ Oceanfront Resort Accommodation',
-      'Daily Gourmet Breakfast & Dinner',
-      'Inter-Island Cat Cocos Ferry Transfers',
-      'Guided Anse Source d\'Argent Beach Tour',
-      '24/7 Dedicated Concierge Support'
-    ],
-    highlights: ['Catamaran Sunset Cruise', 'Vallée de Mai Nature Trail', 'Snorkeling at St. Anne Marine Park']
-  },
-  {
-    id: 'pkg-australia-barrier-reef',
-    title: '6-Day Barrier Reef & Daintree Luxury Escape',
-    destination: 'Cairns & Port Douglas, Australia',
-    image: 'https://images.unsplash.com/photo-1582967788606-a171c1080cb0?auto=format&fit=crop&w=800&q=80',
-    priceUSD: 1299,
-    originalPriceUSD: 1699,
-    discountPercent: 23,
-    rating: 4.92,
-    nights: 6,
-    days: 7,
-    badge: 'BEST SELLER ⭐',
-    inclusions: [
-      'Return Domestic / Regional Flights',
-      '4★ Luxury Eco-Lodge Stay',
-      'Outer Reef Helicopter + Snorkel Day Tour',
-      'Daintree Rainforest Guided Expedition',
-      'Daily Breakfast & Airport Transfers',
-      'Zero Hidden Booking Fees'
-    ],
-    highlights: ['Helicopter Reef Overflight', 'Silky Oaks Spa Voucher', 'Indigenous Cultural Tour']
-  },
-  {
-    id: 'pkg-maldives-overwater',
-    title: '5-Nights Maldives All-Inclusive Overwater Villa',
-    destination: 'North Malé Atoll, Maldives',
-    image: 'https://images.unsplash.com/photo-1514282401047-d79a71a590e8?auto=format&fit=crop&w=800&q=80',
-    priceUSD: 1899,
-    originalPriceUSD: 2499,
-    discountPercent: 24,
-    rating: 4.99,
-    nights: 5,
-    days: 6,
-    badge: 'PHONE-ONLY EXCLUSIVE 📞',
-    inclusions: [
-      'Return Flights with Top Carrier',
-      'Overwater Villa with Ocean Slide/Pool',
-      'All-Inclusive Meals & Premium Drinks',
-      'Speedboat / Seaplane Round-Trip Transfers',
-      'Sunset Dolphin Cruise Included',
-      'Complimentary Spa Massage Treatment'
-    ],
-    highlights: ['Floating Breakfast Experience', 'Undersea Dining Discount', 'Snorkeling Gear Included']
-  },
-  {
-    id: 'pkg-bali-wellness',
-    title: '7-Day Romantic Bali Spa & Villa Retreat',
-    destination: 'Ubud & Seminyak, Indonesia',
-    image: 'https://images.unsplash.com/photo-1537996194471-e657df975ab4?auto=format&fit=crop&w=800&q=80',
-    priceUSD: 799,
-    originalPriceUSD: 1099,
-    discountPercent: 27,
-    rating: 4.89,
-    nights: 7,
-    days: 8,
-    badge: 'LIMITED TIME ⚡',
-    inclusions: [
-      'Return Flights to Denpasar',
-      'Private Pool Villa in Ubud (4 Nights)',
-      'Beachfront Resort in Seminyak (3 Nights)',
-      'Daily Organic Breakfast & Afternoon Tea',
-      'Balinese 90-Min Couples Massage',
-      'Private Driver for Airport Transfers'
-    ],
-    highlights: ['Tegallalang Rice Terrace Tour', 'Catching Uluwatu Sunset', 'Private Floating Breakfast']
-  }
+  { id: 'pkg-sydney', title: 'Sydney City & Coast Escape', destination: 'Sydney, New South Wales', image: 'https://images.unsplash.com/photo-1506973035872-a4ec16b8e8d9?auto=format&fit=crop&w=800&q=80', priceUSD: 1199, originalPriceUSD: 1450, discountPercent: 17, rating: 4.8, nights: 4, days: 5, badge: 'POPULAR', inclusions: ['Accommodation options tailored to you', 'Airport transfer planning', 'Flexible sightseeing suggestions', 'Personal itinerary support'], highlights: ['Harbour cruise ideas', 'Beach day recommendations', 'City dining guide'] },
+  { id: 'pkg-reef', title: 'Cairns & Reef Adventure', destination: 'Cairns, Queensland', image: 'https://images.unsplash.com/photo-1582967788606-a171c1080cb0?auto=format&fit=crop&w=800&q=80', priceUSD: 1499, originalPriceUSD: 1790, discountPercent: 16, rating: 4.9, nights: 5, days: 6, badge: 'TOP PICK', inclusions: ['Stay and transfer options', 'Reef tour planning', 'Flexible day-trip suggestions', 'Personal itinerary support'], highlights: ['Reef day experience', 'Rainforest discovery', 'Tropical stay options'] },
+  { id: 'pkg-red-centre', title: 'Uluru & Outback Discovery', destination: 'Red Centre, Northern Territory', image: 'https://images.unsplash.com/photo-1561214115-f2f134cc4912?auto=format&fit=crop&w=800&q=80', priceUSD: 1399, originalPriceUSD: 1680, discountPercent: 17, rating: 4.8, nights: 4, days: 5, badge: 'OUTBACK ESCAPE', inclusions: ['Stay options for every budget', 'Arrival and departure planning', 'Guided experience suggestions', 'Personal itinerary support'], highlights: ['Sunrise viewing', 'Desert walks', 'Stargazing ideas'] },
+  { id: 'pkg-tasmania', title: 'Tasmania Scenic Road Trip', destination: 'Hobart & Tasmania', image: 'https://images.unsplash.com/photo-1496497243327-9dccd845c35f?auto=format&fit=crop&w=800&q=80', priceUSD: 1599, originalPriceUSD: 1920, discountPercent: 17, rating: 4.9, nights: 6, days: 7, badge: 'SCENIC ROUTE', inclusions: ['Flexible stay options', 'Car-hire planning support', 'Route and stop recommendations', 'Personal itinerary support'], highlights: ['Hobart highlights', 'National park ideas', 'Coastal drive'] },
 ];
 
 export const AIRLINE_PARTNERS = [
-  { name: 'Air Seychelles', logo: '🇸🇨', code: 'HM', directRoutes: 'Mahé, Praslin, Johannesburg, Mumbai', fareFromUSD: 399 },
-  { name: 'Qantas Airways', logo: '🇦🇺', code: 'QF', directRoutes: 'Sydney, Melbourne, Perth, Brisbane, London', fareFromUSD: 450 },
-  { name: 'Emirates', logo: '🇦🇪', code: 'EK', directRoutes: 'Dubai, Seychelles, Sydney, London, New York', fareFromUSD: 520 },
-  { name: 'Singapore Airlines', logo: '🇸🇬', code: 'SQ', directRoutes: 'Singapore, Sydney, Bali, Maldives, Perth', fareFromUSD: 480 },
-  { name: 'Qatar Airways', logo: '🇶🇦', code: 'QR', directRoutes: 'Doha, Seychelles, Sydney, Paris, London', fareFromUSD: 510 },
-  { name: 'Etihad Airways', logo: '🇦🇪', code: 'EY', directRoutes: 'Abu Dhabi, Seychelles, Sydney, Frankfurt', fareFromUSD: 490 },
-  { name: 'Virgin Australia', logo: '🇦🇺', code: 'VA', directRoutes: 'Sydney, Brisbane, Melbourne, Fiji, Bali', fareFromUSD: 320 }
+  { name: 'Flexible domestic fares', logo: '✈️', code: 'FLEX', directRoutes: 'Sydney, Melbourne, Brisbane and more', fareFromUSD: 129 },
+  { name: 'Weekend city breaks', logo: '🏙️', code: 'CITY', directRoutes: 'Australia’s favourite city escapes', fareFromUSD: 159 },
+  { name: 'Tropical north routes', logo: '🌴', code: 'NORTH', directRoutes: 'Cairns, Gold Coast and Queensland', fareFromUSD: 189 },
+  { name: 'Western escapes', logo: '🌅', code: 'WEST', directRoutes: 'Perth and Coral Coast journeys', fareFromUSD: 199 },
 ];
 
 export const MOCK_FLIGHT_RESULTS = [
-  {
-    id: 'fl-1',
-    airline: 'Air Seychelles',
-    flightNo: 'HM 077',
-    logo: '🇸🇨',
-    fromCode: 'SYD',
-    fromCity: 'Sydney',
-    toCode: 'SEZ',
-    toCity: 'Mahé, Seychelles',
-    deptTime: '08:30 AM',
-    arrTime: '04:15 PM',
-    duration: '11h 45m',
-    stops: '1 Stop (DXB)',
-    cabin: 'Economy',
-    priceUSD: 640,
-    dealBadge: 'Cheapest Option',
-    seatsRemaining: 4
-  },
-  {
-    id: 'fl-2',
-    airline: 'Emirates',
-    flightNo: 'EK 415',
-    logo: '🇦🇪',
-    fromCode: 'SYD',
-    fromCity: 'Sydney',
-    toCode: 'SEZ',
-    toCity: 'Mahé, Seychelles',
-    deptTime: '06:00 PM',
-    arrTime: '06:45 AM (+1)',
-    duration: '14h 45m',
-    stops: '1 Stop (DXB)',
-    cabin: 'Economy / Flex',
-    priceUSD: 720,
-    dealBadge: 'Top Rated',
-    seatsRemaining: 7
-  },
-  {
-    id: 'fl-3',
-    airline: 'Qatar Airways',
-    flightNo: 'QR 909',
-    logo: '🇶🇦',
-    fromCode: 'SYD',
-    fromCity: 'Sydney',
-    toCode: 'SEZ',
-    toCity: 'Mahé, Seychelles',
-    deptTime: '10:15 PM',
-    arrTime: '08:50 AM (+1)',
-    duration: '13h 35m',
-    stops: '1 Stop (DOH)',
-    cabin: 'Premium Business',
-    priceUSD: 1850,
-    dealBadge: 'Business Luxury',
-    seatsRemaining: 2
-  },
-  {
-    id: 'fl-4',
-    airline: 'Qantas Airways',
-    flightNo: 'QF 001',
-    logo: '🇦🇺',
-    fromCode: 'SYD',
-    fromCity: 'Sydney',
-    toCode: 'LHR',
-    toCity: 'London Heathrow',
-    deptTime: '03:45 PM',
-    arrTime: '06:20 AM (+1)',
-    duration: '21h 35m',
-    stops: '1 Stop (SIN)',
-    cabin: 'Economy',
-    priceUSD: 890,
-    dealBadge: 'Direct Express',
-    seatsRemaining: 5
-  }
+  { id: 'fl-1', airline: 'TheTravelOz flexible fare', flightNo: 'FLEX 101', logo: '✈️', fromCode: 'SYD', fromCity: 'Sydney', toCode: 'MEL', toCity: 'Melbourne', deptTime: '08:30 AM', arrTime: '10:05 AM', duration: '1h 35m', stops: 'Non-stop', cabin: 'Economy', priceUSD: 129, dealBadge: 'Flexible option', seatsRemaining: 0 },
+  { id: 'fl-2', airline: 'TheTravelOz value fare', flightNo: 'VALUE 202', logo: '✈️', fromCode: 'SYD', fromCity: 'Sydney', toCode: 'CNS', toCity: 'Cairns', deptTime: '10:15 AM', arrTime: '01:20 PM', duration: '3h 05m', stops: 'Non-stop', cabin: 'Economy', priceUSD: 189, dealBadge: 'Value choice', seatsRemaining: 0 },
+  { id: 'fl-3', airline: 'TheTravelOz premium fare', flightNo: 'PREM 303', logo: '✈️', fromCode: 'MEL', fromCity: 'Melbourne', toCode: 'PER', toCity: 'Perth', deptTime: '01:00 PM', arrTime: '03:15 PM', duration: '4h 15m', stops: 'Non-stop', cabin: 'Premium', priceUSD: 269, dealBadge: 'Premium comfort', seatsRemaining: 0 },
 ];
 
-export const TESTIMONIALS = [
-  {
-    id: 't-1',
-    name: 'Sarah & Mark Jenkins',
-    location: 'Sydney, Australia',
-    trip: '7-Day Seychelles Honeymoon',
-    rating: 5,
-    avatar: 'https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=200&q=80',
-    comment: 'TheTravelOz booked our entire Seychelles honeymoon smoothly! The phone agent gave us a fare $350 cheaper than online engines. The resort at Praslin was heavenly!'
-  },
-  {
-    id: 't-2',
-    name: 'David & Family',
-    location: 'Melbourne, Australia',
-    trip: 'Great Barrier Reef & Cairns Family Trip',
-    rating: 5,
-    avatar: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=200&q=80',
-    comment: 'Impeccable service! We needed custom flights for 5 people with hotel transfers. The customer support team handled everything in 10 minutes.'
-  },
-  {
-    id: 't-3',
-    name: 'Elena Rostova',
-    location: 'London, UK',
-    trip: 'Maldives Overwater Villa Package',
-    rating: 5,
-    avatar: 'https://images.unsplash.com/photo-1517841905240-472988babdf9?auto=format&fit=crop&w=200&q=80',
-    comment: 'I was hesitant about booking over the phone, but TheTravelOz proved 100% genuine, responsive, and saved us hundreds of pounds. 10/10 recommendation!'
-  }
-];
+export const TESTIMONIALS = [];
 
 export const BLOG_POSTS = [
-  {
-    id: 'blog-1',
-    title: 'Best Time to Visit Seychelles: Weather, Islands & Snorkeling Guide',
-    category: 'Island Guides',
-    date: 'Sep 24, 2026',
-    readTime: '6 min read',
-    image: 'https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=800&q=80',
-    excerpt: 'Planning your trip to Mahé, Praslin or La Digue? Here is everything you need to know about weather monsoons, ocean clarity, and island-hopping itineraries.'
-  },
-  {
-    id: 'blog-2',
-    title: '10 Secret Hacks to Find Cheap International Flights from Australia',
-    category: 'Travel Tips',
-    date: 'Sep 20, 2026',
-    readTime: '5 min read',
-    image: 'https://images.unsplash.com/photo-1436491865332-7a61a109cc05?auto=format&fit=crop&w=800&q=80',
-    excerpt: 'Discover how travel concierges unlock unpublished airline fares, flight stopover perks, and zero fee date changes.'
-  },
-  {
-    id: 'blog-3',
-    title: 'Top 5 Luxury Overwater Resorts in Seychelles & Maldives for 2026',
-    category: 'Luxury Travel',
-    date: 'Sep 15, 2026',
-    readTime: '8 min read',
-    image: 'https://images.unsplash.com/photo-1514282401047-d79a71a590e8?auto=format&fit=crop&w=800&q=80',
-    excerpt: 'From glass-floor villas to private butler Service: take a peek inside the world\'s most exclusive tropical sanctuaries.'
-  }
+  { id: 'blog-1', title: 'How to Plan a First-Time Australia Holiday', category: 'Australia Guide', date: 'Travel planning', readTime: '5 min read', image: 'https://images.unsplash.com/photo-1506973035872-a4ec16b8e8d9?auto=format&fit=crop&w=800&q=80', excerpt: 'Choose the right regions, allow enough travel time and create an itinerary that balances cities, coast and nature.' },
+  { id: 'blog-2', title: 'When to Visit Queensland’s Tropical Coast', category: 'Travel Tips', date: 'Travel planning', readTime: '4 min read', image: 'https://images.unsplash.com/photo-1582967788606-a171c1080cb0?auto=format&fit=crop&w=800&q=80', excerpt: 'A practical guide to seasons, reef conditions and planning a relaxed tropical north escape.' },
+  { id: 'blog-3', title: 'Australia Road Trip Planning Checklist', category: 'Road Trips', date: 'Travel planning', readTime: '6 min read', image: 'https://images.unsplash.com/photo-1496497243327-9dccd845c35f?auto=format&fit=crop&w=800&q=80', excerpt: 'Build a safer, smoother road trip with sensible driving days, accommodation stops and time to explore.' },
 ];
 
 export const FAQS = [
-  {
-    question: 'Why are phone booking rates often lower than online travel engines?',
-    answer: 'Airlines and luxury resorts provide special unpublished "consolidator fares" exclusively to licensed travel specialists like TheTravelOz.com. These rates cannot be listed publicly on aggregator engines due to carrier price agreements, saving you up to 30% when speaking directly to our agents.'
-  },
-  {
-    question: 'What is included in your Seychelles & Australia holiday packages?',
-    answer: 'Our holiday packages typically combine round-trip international/regional flights, handpicked 4★ or 5★ accommodation, airport/ferry transfers, daily breakfast, and curated island activities. Every itinerary is fully customizable to your preferences.'
-  },
-  {
-    question: 'How do I modify or cancel my flight or hotel reservation?',
-    answer: 'You can modify or cancel your booking by calling our 24/7 dedicated support team at +1-888-555-0199 or emailing support@thetraveloz.com. Most of our fares include flexible date change options.'
-  },
-  {
-    question: 'Are payments on TheTravelOz.com secure?',
-    answer: 'Yes, 100%. All transactions use 256-bit SSL encryption and are processed through IATA-certified payment gateways supporting major credit cards (Visa, MasterCard, Amex) and bank transfers.'
-  },
-  {
-    question: 'Do I need a visa for Seychelles or Australia?',
-    answer: 'Seychelles is a visa-free country for all passport holders (requires valid passport, return ticket, and accommodation proof). For Australia, most visitors need an Electronic Travel Authority (ETA) or eVisitor visa, which our concierge team can assist you with.'
-  }
+  { question: 'How do I request a trip quote?', answer: 'Choose a destination or package and submit the enquiry form. TheTravelOz will use the details you share to prepare travel options for your request.' },
+  { question: 'Are displayed prices final?', answer: 'Prices are guide prices and can change with dates, availability, traveller numbers and selected inclusions. Your final price is confirmed before you book.' },
+  { question: 'Can I change or cancel a booking?', answer: 'Change and cancellation conditions vary by the selected travel service. These conditions will be shared with you before confirmation.' },
+  { question: 'How is my enquiry information used?', answer: 'TheTravelOz uses the information you provide to respond to your enquiry and arrange requested travel services. Please read our Privacy Policy for more details.' },
+  { question: 'Do I need travel insurance?', answer: 'Travel insurance can help protect against unexpected changes. Consider your needs and arrange suitable cover before you travel.' },
 ];

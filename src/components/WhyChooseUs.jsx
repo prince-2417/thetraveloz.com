@@ -5,23 +5,23 @@ export default function WhyChooseUs({ onOpenQuoteModal }) {
   const pillars = [
     {
       icon: PhoneCall,
-      title: '24/7 Phone Concierge & Exclusive Fares',
-      description: 'Our certified travel agents unlock private consolidator flight rates and resort upgrades that online booking algorithms cannot show.'
+      title: 'Australia travel inspiration',
+      description: 'Find destination ideas for cities, coastlines, national parks and road trips across Australia.'
     },
     {
       icon: DollarSign,
-      title: 'Best Price Match Guarantee',
-      description: 'Found a lower flight or resort deal elsewhere? Bring it to us and we will match or beat the price with extra perks included.'
+      title: 'Clear trip planning',
+      description: 'Build a request around your dates, budget, travel style and the places you want to see.'
     },
     {
       icon: Award,
-      title: '100% Handpicked Luxury & Budget Stays',
-      description: 'Every hotel and island resort in our Seychelles & Australia catalog is personally vetted for hygiene, service excellence, and amenities.'
+      title: 'Flexible holiday ideas',
+      description: 'Use our suggested routes as a starting point, then tailor the pace, stays and experiences to your trip.'
     },
     {
       icon: ShieldCheck,
-      title: 'Zero Hidden Fees & Flexible Changes',
-      description: 'Transparent pricing with no surprise surcharge fees at checkout. Easy flexible date change options on international bookings.'
+      title: 'Helpful travel information',
+      description: 'Review destination guides and booking conditions before you decide on your next journey.'
     }
   ];
 
@@ -37,7 +37,7 @@ export default function WhyChooseUs({ onOpenQuoteModal }) {
             Why Book Your Next Escape With <span className="gradient-text">TheTravelOz</span>?
           </h2>
           <p className="section-description">
-            We combine high-speed digital flight comparison with traditional personalized 24/7 human concierge assistance.
+            TheTravelOz brings Australian travel ideas, destination guides and itinerary requests together in one place.
           </p>
         </div>
 
@@ -60,33 +60,30 @@ export default function WhyChooseUs({ onOpenQuoteModal }) {
         {/* Stats Counter Bar */}
         <div className="stats-bar shadow-glow">
           <div className="stat-box">
-            <span className="stat-number">15,000+</span>
-            <span className="stat-label">Happy Travelers Served</span>
+            <span className="stat-number">8</span>
+            <span className="stat-label">Featured destinations</span>
           </div>
           <div className="stat-box border-left">
-            <span className="stat-number">99.4%</span>
-            <span className="stat-label">5-Star Customer Reviews</span>
+            <span className="stat-number">4</span>
+            <span className="stat-label">Sample holiday packages</span>
           </div>
           <div className="stat-box border-left">
-            <span className="stat-number">$1.4M+</span>
-            <span className="stat-label">Saved in Airfare Deals</span>
+            <span className="stat-number">1</span>
+            <span className="stat-label">Easy trip enquiry form</span>
           </div>
           <div className="stat-box border-left">
-            <span className="stat-number">24/7</span>
-            <span className="stat-label">Live Phone Hotline</span>
+            <span className="stat-number">100%</span>
+            <span className="stat-label">TheTravelOz content</span>
           </div>
         </div>
 
         {/* Call to Action Banner */}
         <div className="concierge-cta-banner">
           <div className="cta-left">
-            <h3>Ready to Plan Your Dream Seychelles or Australia Vacation?</h3>
-            <p>Talk to our senior destination specialist right now and get a customized itinerary within 15 minutes.</p>
+            <h3>Ready to plan your Australia journey?</h3>
+            <p>Share your travel dates and interests to begin building your ideal itinerary.</p>
           </div>
           <div className="cta-right">
-            <a href="tel:+18885550199" className="cta-phone-btn">
-              <PhoneCall className="icon-sm" /> Call +1-888-555-0199
-            </a>
             <button className="cta-quote-btn" onClick={onOpenQuoteModal}>
               Request Online Quote
             </button>

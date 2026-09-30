@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Compass, Phone, Globe, Menu, X, Sparkles, ChevronDown } from 'lucide-react';
+import { Compass, Globe, Menu, X, Sparkles, ChevronDown } from 'lucide-react';
 import { CURRENCIES } from '../data/travelData';
 
 export default function Navbar({ currency, setCurrency, onOpenQuoteModal }) {
@@ -7,13 +7,14 @@ export default function Navbar({ currency, setCurrency, onOpenQuoteModal }) {
   const [currencyDropdownOpen, setCurrencyDropdownOpen] = useState(false);
 
   const navLinks = [
-    { name: 'Flight & Hotel Search', href: '#search' },
-    { name: 'Destinations', href: '#destinations' },
-    { name: 'Holiday Deals', href: '#packages' },
-    { name: 'Airlines', href: '#airlines' },
-    { name: 'Why Us', href: '#why-us' },
-    { name: 'Travel Guides', href: '#blog' },
-    { name: 'FAQ', href: '#faq' },
+    { name: 'Flights', href: '/flights' },
+    { name: 'Destinations', href: '/destinations' },
+    { name: 'Holiday Deals', href: '/holiday-deals' },
+    { name: 'Airlines', href: '/airlines' },
+    { name: 'Car Rentals', href: '/car-rentals' },
+    { name: 'Why Us', href: '/why-us' },
+    { name: 'Travel Guides', href: '/travel-guides' },
+    { name: 'FAQ', href: '/faq' },
   ];
 
   return (
@@ -55,14 +56,6 @@ export default function Navbar({ currency, setCurrency, onOpenQuoteModal }) {
               )}
             </div>
 
-            <a href="tel:+18885550199" className="top-phone-link">
-              <Phone className="icon-xs" />
-              <span>US Toll Free: +1-888-555-0199</span>
-            </a>
-            <a href="tel:+61280000199" className="top-phone-link hide-mobile">
-              <Phone className="icon-xs" />
-              <span>AU Direct: +61-2-8000-0199</span>
-            </a>
           </div>
         </div>
       </div>
@@ -71,20 +64,20 @@ export default function Navbar({ currency, setCurrency, onOpenQuoteModal }) {
       <div className="main-nav">
         <div className="container nav-inner">
           {/* Brand Logo */}
-          <a href="#" className="brand-logo">
+          <a href="/" className="brand-logo">
             <div className="logo-icon-wrapper">
               <Compass className="logo-compass" />
             </div>
             <div className="logo-text">
               <span className="logo-main">TheTravelOz</span>
-              <span className="logo-sub">GLOBAL GETAWAYS & SEYCHELLES</span>
+              <span className="logo-sub">AUSTRALIA TRAVEL IDEAS</span>
             </div>
           </a>
 
           {/* Nav Links Desktop */}
           <nav className="desktop-menu">
             {navLinks.map((link) => (
-              <a key={link.name} href={link.href} className="nav-link">
+              <a key={link.name} href={link.href} className={`nav-link ${window.location.pathname === link.href ? 'active' : ''}`}>
                 {link.name}
               </a>
             ))}
@@ -92,18 +85,9 @@ export default function Navbar({ currency, setCurrency, onOpenQuoteModal }) {
 
           {/* Action CTAs */}
           <div className="nav-actions">
-            <a href="tel:+18885550199" className="call-cta-btn">
-              <div className="call-icon-bg">
-                <Phone className="icon-sm pulse-anim" />
-              </div>
-              <div className="call-text-col">
-                <span className="call-lbl">24/7 AGENT LINE</span>
-                <span className="call-num">+1-888-555-0199</span>
-              </div>
-            </a>
-
             <button className="quote-cta-btn" onClick={onOpenQuoteModal}>
-              Request Free Quote
+              <span className="quote-label-desktop">Request Free Quote</span>
+              <span className="quote-label-mobile">Get Quote</span>
             </button>
 
             {/* Mobile Hamburger Button */}
@@ -136,12 +120,6 @@ export default function Navbar({ currency, setCurrency, onOpenQuoteModal }) {
             </nav>
 
             <div className="mobile-drawer-footer">
-              <a href="tel:+18885550199" className="mobile-phone-btn">
-                <Phone className="icon-sm" /> Call Toll Free: +1-888-555-0199
-              </a>
-              <a href="tel:+61280000199" className="mobile-phone-btn secondary">
-                <Phone className="icon-sm" /> Call AU Desk: +61-2-8000-0199
-              </a>
               <button 
                 className="mobile-quote-btn"
                 onClick={() => {
