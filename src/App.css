@@ -517,6 +517,18 @@
   width: 100%;
 }
 
+/* iOS Safari centres native date values unless its internal fields are aligned explicitly. */
+.custom-date-input {
+  text-align: left;
+}
+
+.custom-date-input::-webkit-date-and-time-value,
+.custom-date-input::-webkit-datetime-edit,
+.custom-date-input::-webkit-datetime-edit-fields-wrapper {
+  padding: 0;
+  text-align: left;
+}
+
 .custom-select option {
   background: var(--bg-surface);
   color: var(--text-primary);
