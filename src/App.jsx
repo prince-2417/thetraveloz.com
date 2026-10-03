@@ -133,6 +133,20 @@ export default function App() {
           <StaticPage type="privacy" />
         ) : path === '/terms-and-conditions' ? (
           <StaticPage type="terms" />
+        ) : path === '/ccpa' ? (
+          <StaticPage type="ccpa" />
+        ) : path === '/gdpr' ? (
+          <StaticPage type="gdpr" />
+        ) : path === '/advertiser-policy' ? (
+          <StaticPage type="advertiser" />
+        ) : path === '/taxes-and-fee' ? (
+          <StaticPage type="taxesFees" />
+        ) : path === '/cookie-policy' ? (
+          <StaticPage type="cookies" />
+        ) : path === '/cancellation-policy' ? (
+          <StaticPage type="cancellation" />
+        ) : path === '/refund-policy' ? (
+          <StaticPage type="refund" />
         ) : path === '/contact' ? (
           <StaticPage type="contact" />
         ) : (
@@ -160,3 +174,4 @@ export default function App() {
     </div>
   );
 }
+
